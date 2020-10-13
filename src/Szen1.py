@@ -25,6 +25,7 @@ def Szen1(draw : ImageDraw, radius : float, shrink_coef : float, iterations : in
 image = Image.new("RGB", (1000, 1000), color="#FFFFFF")
 draw = ImageDraw.Draw(image)
 
-Szen1(draw, radius=500, shrink_coef=.75, iterations=6)
+Szen1(draw, radius=750, shrink_coef=.65, iterations=12)
 
 image.show()
+#image.save("out.png")
