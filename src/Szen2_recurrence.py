@@ -49,10 +49,10 @@ def Szen2_recurrence(draw : ImageDraw, R : float, q : float, a : float, N : int,
 image = Image.new("RGB", (1000, 1000), color="#FFFFFF")
 draw = ImageDraw.Draw(image)
 
-Szen2_recurrence(draw, R=500, q=.85, a=pi / 3, N=9)
+Szen2_recurrence(draw, R=500, q=.85, a=pi / 4, N=6)
 
 # With convergence point pin-pointed
 #Szen2_recurrence(draw, R=500, q=.85, a=pi / 4, N=6, show_convergence=True)
 
-image.save("R=500_q=0.85_a=pidiv3_N=9.png")
+image.show()
 # image.save("out.png")
