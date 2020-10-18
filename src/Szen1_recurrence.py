@@ -22,9 +22,9 @@ def Szen1_recurrence(draw : ImageDraw, R : float, q : float, N : int):
     draw_circle(draw, center + 500j, R)
 
     # Find the center and radius of the next circles, and draw them
-    for i in range(1, N):
+    for n in range(1, N):
         radius *= q
-        center += radius * constant_part * (2 * i - N)
+        center += radius * constant_part * (2 * n - N)
 
         draw_circle(draw, center + 500j, radius)
 
