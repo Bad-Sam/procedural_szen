@@ -1,5 +1,5 @@
 from cmath import exp, pi
-from complex_draw import draw_circle, draw_cross
+from complex_draw import draw_circle
 from PIL import Image, ImageDraw
 
 # Draw pattern 2 from a starting radius, shrinking coefficient, rotation angle,
