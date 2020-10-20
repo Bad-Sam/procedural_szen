@@ -43,6 +43,9 @@ def Szen2_recurrence(draw : ImageDraw, R : float, q : float, a : float, N : int,
 
         draw_circle(draw, center, radius)
 
+        if show_convergence:
+            draw_cross(draw, center, color="#0000FF")
+
     if show_convergence:
         draw_cross(draw, (R + 500j) - (R * q * factor * constant_part) / (1 - q * factor))
 
@@ -55,7 +58,7 @@ draw = ImageDraw.Draw(image)
 Szen2_recurrence(draw, R=500, q=.85, a=pi / 4, N=6)
 
 # With convergence point pin-pointed
-#Szen2_recurrence(draw, R=500, q=.85, a=pi / 4, N=6, show_convergence=True)
+# Szen2_recurrence(draw, R=500, q=.85, a=pi / 4, N=6, show_convergence=True)
 
 image.show()
-# image.save("out.png")
+image.save("out.png")

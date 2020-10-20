@@ -41,6 +41,9 @@ def Szen2_explicit(draw : ImageDraw, R : float, q : float, a : float, N : int, s
         
         draw_circle(draw, wn, radius)
 
+        if show_convergence:
+            draw_cross(draw, wn, color="#0000FF")
+
     if show_convergence:
         factor = exp(1j * a)
         draw_cross(draw, w1 - (R * q * factor * ((q ** -1) - 1)) / (1 - q * factor))
