@@ -20,21 +20,23 @@ def Szen3_explicit(draw : ImageDraw, R : float, q : float, a : float, N : int):
     a = -a
 
     # Constant parts pre-computed to simplify calculations in the loop
-    w1          = R + 500j
-    eia         = exp(1j * a)
-    const_part  = R * ((q ** -1) - 1) / (N - 2)
+    w1              = R + 500j
+    eia             = exp(1j * a)
+    ei2a            = eia * eia
+    qeia            = q * eia
+    q_1_eia         = (q ** -1)
+    left_coef       = R * (q_1_eia - 1) / (N - 2)
+    q_1_eia         -= eia
+    inner_left_coef = 1 - qeia * (1 + eia)
+    denom           = 1 / (1 - qeia)
+    denom2          = denom * denom
+    denom           *= N
+    denom2          *= 2 * q
 
     # Induction variables
     radius  = R
     eina    = eia
-    qn      = q * q
-    qeia    = q * eia
-    q2eia   = q * qeia
-    denom   = 1 / (1 - qeia)
-    denom2  = denom * denom
-
-    denom *= N
-    denom2 *= 2
+    qn      = q
 
     # Save the first circle's computation (simpler this way)
     draw_circle(draw, w1, R)
@@ -43,13 +45,11 @@ def Szen3_explicit(draw : ImageDraw, R : float, q : float, a : float, N : int):
         # Update the induction variable
         eina    *= eia
         radius  *= q
-        qnx1     = qn * q
+        qn      *= q
         
-        wn      = w1 + const_part * ((q2eia - n * qn * eina + qnx1 * eina * (n * eia - 1)) * denom2 - (qeia - qn * eina) * denom)
+        wn      = w1 + left_coef * (denom2 * (inner_left_coef - qn * (n * eina * q_1_eia - ei2a)) - denom * (qeia - qn * eina))
         
         draw_circle(draw, wn, radius)
-
-        qn      = qnx1
 
 
 # ====== Main ======
