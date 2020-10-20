@@ -16,7 +16,7 @@ def Szen3_recurrence(draw : ImageDraw, R : float, q : float, a : float, N : int)
     assert (q > 0 and q < 1), "q must be between 0 and 1 excluded"
 
     # Since we don't flip the image, the direct rotation is with
-    # a negative angle
+    # a negative sign
     a = -a
 
     # Induction variables
@@ -34,9 +34,12 @@ def Szen3_recurrence(draw : ImageDraw, R : float, q : float, a : float, N : int)
 
     # Find the center and radius of the next circles, and draw them
     for n in range(1, N):
-        e *= factor
-        radius *= q
-        center += radius * e * constant_part * (2 * n - N)
+        # Update the induction variables
+        e       *= factor
+        radius  *= q
+
+        # Find the next center affix
+        center  += radius * e * constant_part * (2 * n - N)
 
         draw_circle(draw, center, radius)
 

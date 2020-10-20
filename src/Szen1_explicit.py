@@ -32,7 +32,7 @@ def Szen1_explicit(draw : ImageDraw, R : float, q : float, N : int):
         radius  *= q
         qn      = qn_1 * q
 
-        # Find the next center coordinates on the reals axis
+        # Find the next center affix
         wn      = R + left_operand * (left_inner_coef * (1 - n * qn_1 + qn * (n - 1)) - right_inner_coef * (q - qn))
         qn_1    = qn
         

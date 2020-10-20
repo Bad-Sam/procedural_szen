@@ -3,7 +3,7 @@ from complex_draw import draw_circle, draw_cross
 from PIL import Image, ImageDraw  
 
 # Draw pattern 2 from a starting radius, shrinking coefficient,
-# and a number of iterations, with the explicit approach
+# an angle, and a number of iterations, with the explicit approach
 # \param draw ImageDraw drawing context
 # \param R Radius of the first outer circle
 # \param R Radius of the first outer circle
@@ -17,7 +17,7 @@ def Szen2_explicit(draw : ImageDraw, R : float, q : float, a : float, N : int, s
     assert (q > 0 and q < 1), "q must be between 0 and 1 excluded"
 
     # Since we don't flip the image, the direct rotation is with
-    # a negative angle
+    # a negative sign
     a = -a
 
     # Induction variables
