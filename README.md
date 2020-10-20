@@ -9,3 +9,4 @@ Google Doc [ici](https://docs.google.com/document/d/14fUDx34dhya4yISxPC9Fv_ZMERP
 ## Où commencer ?
 
 Le compte rendu de ce TP se trouve dans [GP2_2020_2021_Complex_Szen_AmaraPetit.pdf](GP2_2020_2021_Complex_Szen_AmaraPetit.pdf)
+Pour un descriptif de la structure de cette archive, voir la partie "Annexe" du compte rendu.
