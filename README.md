@@ -1,12 +1,10 @@
-# TP - Génération de motifs 2D
-par Sami AMARA et Denis PETIT.
+# TP - 2D pattern generation
+by Sami AMARA and Denis PETIT.
 
 ## Description
-TP portant sur les suites de nombres complexes pour le dessin de motifs 2D procéduraux.
+Practical school assigment on sequences and series in the complex field, applied to 2D pattern drawing.
 
-Google Doc [ici](https://docs.google.com/document/d/14fUDx34dhya4yISxPC9Fv_ZMERPfgBWwKNS1oz6qy0Y/edit#).
+## Where to start?
 
-## Où commencer ?
-
-Le compte rendu de ce TP se trouve dans [GP2_2020_2021_Complex_Szen_AmaraPetit.pdf](GP2_2020_2021_Complex_Szen_AmaraPetit.pdf).
-Pour un descriptif de la structure de cette archive, voir la partie "Annexe" du compte rendu, en fin de document.
+The report of this practical work is in [GP2_2020_2021_Complex_Szen_AmaraPetit.pdf](GP2_2020_2021_Complex_Szen_AmaraPetit.pdf).
+For further explanations about the architecture of this project, see the "Annexes" section at the end of the report.
