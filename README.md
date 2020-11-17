@@ -2,7 +2,7 @@
 by Sami AMARA and Denis PETIT.
 
 ## Description
-Practical school assigment on sequences and series in the complex field, applied to 2D pattern drawing.
+Practical school assignment on sequences and series in the complex field, applied to 2D pattern drawing.
 
 ## Where to start?
 
