@@ -1,4 +1,5 @@
 # TP - 2D pattern generation
+<div align="center"><img src="img/Szen2_explicit/R=500_q=0.85_a=pidiv4_N=20.png" /></div>
 by Sami AMARA and Denis PETIT.
 
 ## Description
